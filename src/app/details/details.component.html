@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Details</h1>
+<div>
+<p>Your Name:{{data.registerForm.fullName}}</p>
+<p>Your Email:{{data.registerForm.mail}}</p>
+<p>Your Password:{{data.registerForm.password}}</p>
+<p>Your Mobile Number:{{data.registerForm.mobileNumber}}</p>
+<p>Your City Name:{{data.registerForm.cityName}}</p>
+</div>
+<h3>Family Details</h3>
+<div *ngFor="let d of data.registerForm.family | slice:1; let i =index">
+<p>Relation: {{d.relation}}</p>
+<p>Name: {{d.name}}</p>
+</div>
+<br><button (click)=goBack()>EDIT</button>
+</div>
